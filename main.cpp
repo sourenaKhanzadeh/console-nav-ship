@@ -52,6 +52,11 @@ int main(){
 
     gotoXY(rows, cols);
     std::cout << ".........Goodbye Word..........." << std::endl;
-    std::cout << rows  << " " << cols << std::endl;
+    std::cout << "("  << rows  << ", " << cols  << ")" << std::endl;
+
+    Sleep(1000);
+    // press to quit
+    getch();
+
     return EXIT_SUCCESS;
 }
