@@ -19,18 +19,63 @@ inline int wherey(){return CursorPosition.Y;}
 inline void clsSrc(){system("cls");}
 
 
-struct Player{
-    std::string str = ">>";
+
+struct Tele{
+    const char amm = '*';
     __int8 x;
     __int8 y;
+    bool dir;
+    void update();
     void const operator++(){this->x++;}
     void const operator--(){this->x--;}
     void const operator*(){this->y++;}
     void const operator!(){this->y--;}
 };
 
+void Tele::update() {
+    int len = 55;
+    while(len >=0){
+        switch (dir){
+            case true:++(*this);break;
+            default:--(*this);break;
+        }
 
+        gotoXY(this->x, this->y);
+        std::cout << this->amm;
+        len--;
+        Sleep(10);
+        gotoXY(dir?this->x-1:this->x+2, this->y);
+        std::cout << " ";
+    }
 
+}
+
+struct Player{
+    std::string str = ">>";
+    __int8 x;
+    __int8 y;
+    Tele tele;
+    void fire();
+    void collision();
+    void const operator++(){this->x++;}
+    void const operator--(){this->x--;}
+    void const operator*(){this->y++;}
+    void const operator!(){this->y--;}
+};
+
+void Player::fire() {
+    tele.x = this->x;
+    tele.y = this->y;
+    tele.update();
+
+    // set to the position of ammo
+    this->x = tele.x;
+    this->y = tele.y;
+}
+
+void Player::collision() {
+    if(this->x < 0 )this->x=1;
+}
 
 int main(){
     // Take The default word
@@ -38,7 +83,7 @@ int main(){
     int cols, rows;
 
     // Construct a player
-    Player a;a.x=0;a.y=0;
+    Player player;player.x=0;player.y=0;
 
     // store console colors
     GetConsoleScreenBufferInfo(console, &csInfo);
@@ -55,8 +100,8 @@ int main(){
         //clear the screen
         clsSrc();
 
-        gotoXY(a.x, a.y);
-        std::cout << a.str;
+        gotoXY(player.x, player.y);
+        std::cout << player.str;
 
 
         // delay the game
@@ -64,12 +109,16 @@ int main(){
 
         // get user input
         switch(getch()){
-            case 'd':a.str=">>";++a;break;
-            case 'a':a.str="<<";--a;break;
-            case 's':*a;break;
-            case 'w':a.y>0?!a:*a;break;
+            case 'd':player.tele.dir=true;player.str=">>";++player;break;
+            case 'a':player.tele.dir=false;player.str="<<";--player;break;
+            case 's':*player;break;
+            case 'w':player.y>0?!player:*player;break;
+            case 'f':player.fire();break;
             default:run=false;break;
         }
+
+        // detect player collision
+        player.collision();
     }
 
     // restore console color and exit
@@ -79,6 +128,6 @@ int main(){
 
     gotoXY(rows, cols);
     std::cout << ".........Goodbye Word..........." << std::endl;
-
+    std::cout << rows  << " " << cols << std::endl;
     return EXIT_SUCCESS;
 }
