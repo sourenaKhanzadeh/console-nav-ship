@@ -1,0 +1,3 @@
+D:/Users/ProgrammingProjects/c++/games/asteroid/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Users/ProgrammingProjects/c++/games/asteroid/cmake-build-debug/CMakeFiles/asteroid.dir
+D:/Users/ProgrammingProjects/c++/games/asteroid/cmake-build-debug/CMakeFiles/rebuild_cache.dir
