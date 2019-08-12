@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/asteroid.dir/main.cpp.obj"
+  "CMakeFiles/asteroid.dir/prefs.cpp.obj"
   "asteroid.pdb"
   "asteroid.exe"
   "asteroid.exe.manifest"

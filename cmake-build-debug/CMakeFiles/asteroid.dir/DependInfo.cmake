@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Users/ProgrammingProjects/c++/games/asteroid/main.cpp" "D:/Users/ProgrammingProjects/c++/games/asteroid/cmake-build-debug/CMakeFiles/asteroid.dir/main.cpp.obj"
+  "D:/Users/ProgrammingProjects/c++/games/asteroid/prefs.cpp" "D:/Users/ProgrammingProjects/c++/games/asteroid/cmake-build-debug/CMakeFiles/asteroid.dir/prefs.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -149,6 +149,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\asteroid.dir\build.make CMakeFiles/asteroid.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+prefs.obj: prefs.cpp.obj
+
+.PHONY : prefs.obj
+
+# target to build an object file
+prefs.cpp.obj:
+	$(MAKE) -f CMakeFiles\asteroid.dir\build.make CMakeFiles/asteroid.dir/prefs.cpp.obj
+.PHONY : prefs.cpp.obj
+
+prefs.i: prefs.cpp.i
+
+.PHONY : prefs.i
+
+# target to preprocess a source file
+prefs.cpp.i:
+	$(MAKE) -f CMakeFiles\asteroid.dir\build.make CMakeFiles/asteroid.dir/prefs.cpp.i
+.PHONY : prefs.cpp.i
+
+prefs.s: prefs.cpp.s
+
+.PHONY : prefs.s
+
+# target to generate assembly for a file
+prefs.cpp.s:
+	$(MAKE) -f CMakeFiles\asteroid.dir\build.make CMakeFiles/asteroid.dir/prefs.cpp.s
+.PHONY : prefs.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,6 +188,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... prefs.obj
+	@echo ... prefs.i
+	@echo ... prefs.s
 .PHONY : help
 
 

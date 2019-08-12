@@ -83,6 +83,12 @@
 		<Unit filename="D:/Users/ProgrammingProjects/c++/games/asteroid/main.cpp">
 			<Option target="asteroid"/>
 		</Unit>
+		<Unit filename="D:/Users/ProgrammingProjects/c++/games/asteroid/prefs.cpp">
+			<Option target="asteroid"/>
+		</Unit>
+		<Unit filename="D:/Users/ProgrammingProjects/c++/games/asteroid/prefs.h">
+			<Option target="asteroid"/>
+		</Unit>
 		<Unit filename="D:/Users/ProgrammingProjects/c++/games/asteroid/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

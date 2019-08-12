@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.9)
 project(asteroid)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
-add_executable(asteroid main.cpp)
+add_executable(${PROJECT_NAME} main.cpp prefs.cpp prefs.h)

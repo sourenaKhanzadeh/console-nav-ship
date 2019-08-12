@@ -9,10 +9,20 @@
 D:/Users/ProgrammingProjects/c++/games/asteroid/main.cpp
 iostream
 -
+prefs.h
+D:/Users/ProgrammingProjects/c++/games/asteroid/prefs.h
+
+D:/Users/ProgrammingProjects/c++/games/asteroid/prefs.cpp
+prefs.h
+D:/Users/ProgrammingProjects/c++/games/asteroid/prefs.h
+
+D:/Users/ProgrammingProjects/c++/games/asteroid/prefs.h
 conio.h
 -
 windows.h
 D:/Users/ProgrammingProjects/c++/games/asteroid/windows.h
-string.h
-D:/Users/ProgrammingProjects/c++/games/asteroid/string.h
+string
+D:/Users/ProgrammingProjects/c++/games/asteroid/string
+iostream
+-
 
